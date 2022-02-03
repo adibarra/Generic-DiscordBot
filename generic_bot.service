@@ -1,0 +1,14 @@
+[Unit]
+# Service to start and stop the Generic-DiscordBot
+# Author: github/adibarra
+Description=Generic-DiscordBot
+Documentation=https://github.com/adibarra/Generic-DiscordBot
+
+[Service]
+# run the bot
+ExecStart=/usr/bin/python3 /usr/local/lib/generic_bot/DB_main.py
+Restart=always
+
+[Install]
+# autostart the bot on system startup
+WantedBy=default.target
